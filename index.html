@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jorge Esteban Medrano Chacolla — Game Dev Portfolio</title>
   
-  <!-- JetBrains Mono & Outfit Fonts + FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
@@ -15,123 +14,114 @@
 </head>
 <body>
 
-  <!-- Canvas de Naves Espaciales Volando en Fondo -->
+  <!-- * * * CANVAS BACKGROUND ANIMATION * * * -->
   <canvas id="shipsCanvas"></canvas>
 
-  <!-- Ambient Glow Orbs in Background -->
-  <div class="ambient-glow-container">
-    <div class="glow-orb orb-mauve"></div>
-    <div class="glow-orb orb-blue"></div>
+  <div class="ambientGlowContainer">
+    <div class="glowOrb orbMauve"></div>
+    <div class="glowOrb orbBlue"></div>
   </div>
 
-  <!-- Dynamic Mouse Follower Light -->
-  <div class="mouse-follower" id="mouseFollower"></div>
-  <div class="mouse-dot" id="mouseDot"></div>
+  <div class="mouseFollower" id="mouseFollower"></div>
+  <div class="mouseDot" id="mouseDot"></div>
 
-  <!-- VS Code Window Header -->
-  <header class="vscode-header">
-    <div class="vscode-titlebar">
-      <div class="window-dots">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-yellow"></span>
-        <span class="dot dot-green"></span>
+  <!-- * * * VS CODE HEADER * * * -->
+  <header class="vscodeHeader">
+    <div class="vscodeTitlebar">
+      <div class="windowDots">
+        <span class="dot dotRed"></span>
+        <span class="dot dotYellow"></span>
+        <span class="dot dotGreen"></span>
       </div>
-      <div class="vscode-title">
-        <span>jorgemedrano.workspace — Visual Studio Code</span>
+      <div class="vscodeTitle">
+        <span></span>
       </div>
       <div>
-        <span class="title-badge">Game Dev Portfolio</span>
+        <span class="titleBadge">Game Dev Portfolio</span>
       </div>
     </div>
     
-    <nav class="vscode-tabs">
-      <a href="#inicio" class="tab active"><i class="fa-solid fa-code" style="color: var(--mocha-blue);"></i> inicio.cs</a>
-      <a href="#proyectos" class="tab"><i class="fa-solid fa-brackets-curly" style="color: var(--mocha-yellow);"></i> mis_proyectos.json</a>
-      <a href="#skills" class="tab"><i class="fa-solid fa-file-code" style="color: var(--mocha-red);"></i> habilidades.luau</a>
-      <a href="#contacto" class="tab"><i class="fa-solid fa-terminal" style="color: var(--mocha-green);"></i> contacto.sh</a>
+    <nav class="vscodeTabs">
+      <a href="#inicio" class="tab active"><i class="fa-solid fa-code" style="color: var(--mochaBlue);"></i> inicio.cs</a>
+      <a href="#proyectos" class="tab"><i class="fa-solid fa-brackets-curly" style="color: var(--mochaYellow);"></i> mis_proyectos.json</a>
+      <a href="#skills" class="tab"><i class="fa-solid fa-file-code" style="color: var(--mochaRed);"></i> habilidades.luau</a>
+      <a href="#contacto" class="tab"><i class="fa-solid fa-terminal" style="color: var(--mochaGreen);"></i> contacto.sh</a>
     </nav>
   </header>
 
-  <!-- PARTE PRINCIPAL (Hero Section - GIANT TYPOGRAPHY & HERO) -->
+  <!-- * * * HERO SECTION * * * -->
   <section id="inicio" class="hero">
-    <div class="hero-card">
-      <div class="hero-role-tag">
+    <div class="heroCard">
+      <div class="heroRoleTag">
         <i class="fa-solid fa-user-gear"></i> Game Developer &amp; Systems Architect
       </div>
       
-      <!-- GIANT NAME -->
-      <h1 class="hero-name">
-        Jorge Esteban <br><span class="gradient-text">Medrano Chacolla</span>
+      <h1 class="heroName">
+        Jorge Esteban <br><span class="gradientText">Medrano Chacolla</span>
       </h1>
       
-      <p class="hero-sub">
+      <p class="heroSub">
         Desarrollo de videojuegos en Unity (C#) &amp; Roblox (Luau). Especializado en arquitectura multijugador online (Photon PUN 2), IA de navegación (NavMesh) y sistemas modulares en producción.
       </p>
 
-      <!-- Contact Quick Badges -->
-      <div class="hero-tags-row" style="margin-bottom: 1.8rem;">
-        <a href="mailto:jesteban.medrano@gmail.com" class="hero-chip" style="text-decoration: none; color: #cba6f7; font-weight: 700; font-size: 1rem; border-color: rgba(203, 166, 247, 0.4);"><i class="fa-solid fa-envelope" style="color: #cba6f7;"></i> jesteban.medrano@gmail.com</a>
-        <a href="https://wa.me/59178789618" target="_blank" class="hero-chip" style="text-decoration: none; color: #a6e3a1; font-weight: 700; font-size: 1rem; border-color: rgba(166, 227, 161, 0.4);"><i class="fa-brands fa-whatsapp" style="color: #a6e3a1;"></i> +591 78789618</a>
-        <span class="hero-chip" style="font-size: 1rem;"><i class="fa-solid fa-location-dot"></i> Bolivia</span>
+      <div class="heroTagsRow" style="margin-bottom: 1.8rem;">
+        <a href="mailto:jesteban.medrano@gmail.com" class="heroChip" style="text-decoration: none; color: #cba6f7; font-weight: 700; font-size: 1rem; border-color: rgba(203, 166, 247, 0.4);"><i class="fa-solid fa-envelope" style="color: #cba6f7;"></i> jesteban.medrano@gmail.com</a>
+        <a href="https://wa.me/59178789618" target="_blank" class="heroChip" style="text-decoration: none; color: #a6e3a1; font-weight: 700; font-size: 1rem; border-color: rgba(166, 227, 161, 0.4);"><i class="fa-brands fa-whatsapp" style="color: #a6e3a1;"></i> +591 78789618</a>
+        <span class="heroChip" style="font-size: 1rem;"><i class="fa-solid fa-location-dot"></i> Bolivia</span>
       </div>
 
-      <div class="hero-stats-row">
-        <div class="stat-item">
-          <span class="stat-val">5.9M+</span>
-          <span class="stat-lbl">Visitas Totales</span>
+      <div class="heroStatsRow">
+        <div class="statItem">
+          <span class="statVal">5.9M+</span>
+          <span class="statLbl">Visitas Totales</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-val">500+</span>
-          <span class="stat-lbl">Jugadores Concurrentes</span>
+        <div class="statItem">
+          <span class="statVal">500+</span>
+          <span class="statLbl">Jugadores Concurrentes</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-val">83%</span>
-          <span class="stat-lbl">Likes Positivos</span>
+        <div class="statItem">
+          <span class="statVal">83%</span>
+          <span class="statLbl">Likes Positivos</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-val">4</span>
-          <span class="stat-lbl">Proyectos Destacados</span>
+        <div class="statItem">
+          <span class="statVal">4</span>
+          <span class="statLbl">Proyectos Destacados</span>
         </div>
       </div>
 
-      <div class="hero-actions">
-        <a href="#proyectos" class="btn btn-mauve"><i class="fa-solid fa-folder-open"></i> Explorar Mis Proyectos</a>
-        <a href="mailto:jesteban.medrano@gmail.com" class="btn btn-flat"><i class="fa-solid fa-paper-plane"></i> Contactar</a>
+      <div class="heroActions">
+        <a href="#proyectos" class="btn btnMauve"><i class="fa-solid fa-folder-open"></i> Explorar Mis Proyectos</a>
+        <a href="mailto:jesteban.medrano@gmail.com" class="btn btnFlat"><i class="fa-solid fa-paper-plane"></i> Contactar</a>
       </div>
     </div>
   </section>
 
-  <!-- VENTANA DE MIS PROYECTOS -->
-  <section id="proyectos" class="projects-section">
+  <!-- * * * PROJECTS GRID * * * -->
+  <section id="proyectos" class="projectsSection">
     
-    <div class="projects-window">
+    <div class="projectsWindow">
       
-      <!-- Top Window Bar -->
-      <div class="window-bar">
-        <div class="window-title">
+      <div class="windowBar">
+        <div class="windowTitle">
           <i class="fa-solid fa-box-archive"></i> Ventana: Mis Proyectos
         </div>
         
-        <!-- Filter Bar -->
-        <div class="filter-group">
-          <button class="filter-btn active" data-filter="all">Todos (4)</button>
-          <button class="filter-btn" data-filter="unity">Unity (C#)</button>
-          <button class="filter-btn" data-filter="roblox">Roblox (Luau)</button>
+        <div class="filterGroup">
+          <button class="filterBtn active" data-filter="all">Todos (4)</button>
+          <button class="filterBtn" data-filter="unity">Unity (C#)</button>
+          <button class="filterBtn" data-filter="roblox">Roblox (Luau)</button>
         </div>
       </div>
 
-      <!-- Projects Grid -->
-      <div class="projects-grid">
+      <div class="projectsGrid">
 
-        <!-- PROJECT 1: Undertale Funni Ops: Reborn (Roblox - 5.9M+ VISITS) -->
         <article class="card" data-category="roblox">
-          <div class="card-media">
-            <span class="card-badge badge-roblox">🔥 5.9M+ Visitas • Live Ops</span>
-            <!-- YouTube Trailer Embed -->
+          <div class="cardMedia">
+            <span class="cardBadge badgeRoblox">🔥 5.9M+ Visitas • Live Ops</span>
             <iframe src="https://www.youtube.com/embed/ClBTfkdMeUo?si=OlWw0DEh_pqCJDZw" title="Undertale Funni Ops Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; height: 100%;"></iframe>
           </div>
-          <div class="card-body">
-            <div class="card-tags">
+          <div class="cardBody">
+            <div class="cardTags">
               <span class="tag">5.9M Visitas</span>
               <span class="tag">500 CCU</span>
               <span class="tag">83% Likes</span>
@@ -140,27 +130,25 @@
             </div>
             <h3>Undertale Funni Ops: Reborn</h3>
             <p>Juego de gran éxito en Roblox con más de 5.9M de visitas y 500 jugadores activos concurrentes. Sistema de combate en tiempo real y arquitectura orientada a retención.</p>
-            <ul class="bullet-list">
+            <ul class="bulletList">
               <li><i class="fa-solid fa-fire" style="color: #ff2a5f;"></i> <strong>5.9M+ Visitas &amp; 83% de Aprobación.</strong></li>
               <li><i class="fa-solid fa-users" style="color: #89b4fa;"></i> <strong>500+ Jugadores Simultáneos en Vivo.</strong></li>
               <li><i class="fa-solid fa-check"></i> Combate modular procesado en servidor (Server-authoritative).</li>
             </ul>
-            <div class="card-actions">
-              <button class="btn btn-flat" onclick="openModal('modal-undertale')"><i class="fa-solid fa-video"></i> Trailer</button>
-              <a href="https://www.roblox.com/share?code=8b7131f2567878499497ae7222eb3128&type=ExperienceDetails&stamp=1785548542517" target="_blank" rel="noopener" class="btn btn-roblox"><i class="fa-solid fa-play"></i> Roblox</a>
+            <div class="cardActions">
+              <button class="btn btnFlat" onclick="openModal('modal-undertale')"><i class="fa-solid fa-video"></i> Trailer</button>
+              <a href="https://www.roblox.com/share?code=8b7131f2567878499497ae7222eb3128&type=ExperienceDetails&stamp=1785548542517" target="_blank" rel="noopener" class="btn btnRoblox"><i class="fa-solid fa-play"></i> Roblox</a>
             </div>
           </div>
         </article>
 
-        <!-- PROJECT 2: The Void Finals (Unity Online) -->
         <article class="card" data-category="unity">
-          <div class="card-media" id="media-void">
-            <span class="card-badge badge-unity">Unity • Online</span>
-            <!-- GIF Animado de Previsualización Creado del Video VoidTrailer.mp4 -->
+          <div class="cardMedia" id="media-void">
+            <span class="cardBadge badgeUnity">Unity • Online</span>
             <img src="the_void_preview.gif" alt="The Void Finals Gameplay Preview" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="card-body">
-            <div class="card-tags">
+          <div class="cardBody">
+            <div class="cardTags">
               <span class="tag">C#</span>
               <span class="tag">Photon PUN 2</span>
               <span class="tag">TPS Voxel</span>
@@ -168,26 +156,24 @@
             </div>
             <h3>The Void Finals</h3>
             <p>Shooter multijugador 3ª persona (Voxel Art). Batallas 4v4 por el control del centro con física de vuelo (Jetpack).</p>
-            <ul class="bullet-list">
+            <ul class="bulletList">
               <li><i class="fa-solid fa-check"></i> Redes con Photon PUN 2 (Lobbies &amp; Matchmaking).</li>
               <li><i class="fa-solid fa-check"></i> Controles: WASD, Shift (Sprint), Espacio (Fly).</li>
             </ul>
-            <div class="card-actions">
-              <button class="btn btn-flat" onclick="openModal('modal-void')"><i class="fa-solid fa-video"></i> Ver Trailer</button>
-              <a href="https://jorgemedrano.itch.io/the-void" target="_blank" rel="noopener" class="btn btn-itch"><i class="fa-solid fa-download"></i> Itch.io</a>
+            <div class="cardActions">
+              <button class="btn btnFlat" onclick="openModal('modal-void')"><i class="fa-solid fa-video"></i> Ver Trailer</button>
+              <a href="https://jorgemedrano.itch.io/the-void" target="_blank" rel="noopener" class="btn btnItch"><i class="fa-solid fa-download"></i> Itch.io</a>
             </div>
           </div>
         </article>
 
-        <!-- PROJECT 3: Dungeon Escape (Unity AI NavMesh) -->
         <article class="card" data-category="unity">
-          <div class="card-media" id="media-navmesh">
-            <span class="card-badge badge-unity">Unity • AI System</span>
-            <!-- GIF Animado de Previsualización Creado del Video -->
+          <div class="cardMedia" id="media-navmesh">
+            <span class="cardBadge badgeUnity">Unity • AI System</span>
             <img src="dungeon_escape_preview.gif" alt="Dungeon Escape Gameplay Preview" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="card-body">
-            <div class="card-tags">
+          <div class="cardBody">
+            <div class="cardTags">
               <span class="tag">C#</span>
               <span class="tag">NavMesh AI</span>
               <span class="tag">Pathfinding</span>
@@ -195,26 +181,24 @@
             </div>
             <h3>Dungeon Escape</h3>
             <p>Juego de escape de mazmorras con IA de navegación NavMesh, evitación dinámica de trampa/antorchas y física de plataformas.</p>
-            <ul class="bullet-list">
+            <ul class="bulletList">
               <li><i class="fa-solid fa-check"></i> Agentes IA inteligentes con evitación dinámica.</li>
               <li><i class="fa-solid fa-check"></i> Arquitectura C# modular y optimizada.</li>
             </ul>
-            <div class="card-actions">
-              <button class="btn btn-flat" onclick="openModal('modal-navmesh')"><i class="fa-solid fa-video"></i> Ver Trailer</button>
-              <a href="https://jorgemedrano.itch.io/dungeon-escape" target="_blank" rel="noopener" class="btn btn-itch"><i class="fa-solid fa-download"></i> Itch.io</a>
+            <div class="cardActions">
+              <button class="btn btnFlat" onclick="openModal('modal-navmesh')"><i class="fa-solid fa-video"></i> Ver Trailer</button>
+              <a href="https://jorgemedrano.itch.io/dungeon-escape" target="_blank" rel="noopener" class="btn btnItch"><i class="fa-solid fa-download"></i> Itch.io</a>
             </div>
           </div>
         </article>
 
-        <!-- PROJECT 4: Bonkland (Roblox) -->
         <article class="card" data-category="roblox">
-          <div class="card-media">
-            <span class="card-badge badge-roblox">Roblox • Tech Showcase</span>
-            <!-- Google Drive Video Embed -->
+          <div class="cardMedia">
+            <span class="cardBadge badgeRoblox">Roblox • Tech Showcase</span>
             <iframe src="https://drive.google.com/file/d/1od3Xlx1dhqTeGrVepPWaFnF9V-93nopc/preview" title="Bonkland Trailer" frameborder="0" allow="autoplay" allowfullscreen style="width: 100%; height: 100%;"></iframe>
           </div>
-          <div class="card-body">
-            <div class="card-tags">
+          <div class="cardBody">
+            <div class="cardTags">
               <span class="tag">Luau</span>
               <span class="tag">Roblox Studio</span>
               <span class="tag">Físicas Custom</span>
@@ -222,13 +206,13 @@
             </div>
             <h3>Bonkland</h3>
             <p>Demostración de física avanzada en Roblox Studio. Enfoque en código modular desacoplado y pulido de mecánicas.</p>
-            <ul class="bullet-list">
+            <ul class="bulletList">
               <li><i class="fa-solid fa-check"></i> Impulsos y físicas de personaje personalizadas.</li>
               <li><i class="fa-solid fa-check"></i> Estructura Luau limpia con ModuleScripts.</li>
             </ul>
-            <div class="card-actions">
-              <button class="btn btn-flat" onclick="openModal('modal-bonkland')"><i class="fa-solid fa-video"></i> Trailer</button>
-              <a href="https://www.roblox.com/share?code=65f89f6293180b4a94c83a6145e5df06&type=ExperienceDetails&stamp=1785548566007" target="_blank" rel="noopener" class="btn btn-roblox"><i class="fa-solid fa-play"></i> Roblox</a>
+            <div class="cardActions">
+              <button class="btn btnFlat" onclick="openModal('modal-bonkland')"><i class="fa-solid fa-video"></i> Trailer</button>
+              <a href="https://www.roblox.com/share?code=65f89f6293180b4a94c83a6145e5df06&type=ExperienceDetails&stamp=1785548566007" target="_blank" rel="noopener" class="btn btnRoblox"><i class="fa-solid fa-play"></i> Roblox</a>
             </div>
           </div>
         </article>
@@ -237,11 +221,11 @@
     </div>
   </section>
 
-  <!-- Skills Matrix -->
-  <section id="skills" class="skills-section">
-    <h2 style="font-family: var(--font-mono); font-size: 1.6rem; margin-bottom: 1.5rem;"><i class="fa-solid fa-terminal" style="color: var(--mocha-mauve);"></i> ./habilidades_tecnicas</h2>
-    <div class="skills-grid">
-      <div class="skill-box">
+  <!-- * * * SKILLS SECTION * * * -->
+  <section id="skills" class="skillsSection">
+    <h2 style="font-family: var(--font-mono); font-size: 1.6rem; margin-bottom: 1.5rem;"><i class="fa-solid fa-terminal" style="color: var(--mochaMauve);"></i> ./habilidades_tecnicas</h2>
+    <div class="skillsGrid">
+      <div class="skillBox">
         <h4><i class="fa-brands fa-unity"></i> Unity (C#)</h4>
         <ul>
           <li>• Arquitectura C# / OOP &amp; SOLID</li>
@@ -249,7 +233,7 @@
           <li>• FSM &amp; Animation Controller</li>
         </ul>
       </div>
-      <div class="skill-box">
+      <div class="skillBox">
         <h4><i class="fa-solid fa-cube"></i> Roblox (Luau)</h4>
         <ul>
           <li>• Client-Server Scripting</li>
@@ -257,7 +241,7 @@
           <li>• ModuleScripts &amp; Custom Physics</li>
         </ul>
       </div>
-      <div class="skill-box">
+      <div class="skillBox">
         <h4><i class="fa-solid fa-network-wired"></i> Redes &amp; IA</h4>
         <ul>
           <li>• Photon PUN 2 (Rooms &amp; Matchmaking)</li>
@@ -268,11 +252,11 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contacto" class="skills-section" style="padding-bottom: 6rem;">
-    <div style="background: var(--mocha-mantle); border: 2px solid var(--mocha-mauve); border-radius: var(--radius-card); padding: 3rem 2rem; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
-      <h2 style="font-family: var(--font-mono); font-size: 2.2rem; color: var(--mocha-mauve); margin-bottom: 0.8rem;">Jorge Esteban Medrano Chacolla</h2>
-      <p style="color: var(--mocha-subtext1); font-size: 1.15rem; margin-bottom: 2.2rem;">Game Developer &amp; Systems Architect — Disponible para evaluación técnica y proyectos.</p>
+  <!-- * * * CONTACT SECTION * * * -->
+  <section id="contacto" class="skillsSection" style="padding-bottom: 6rem;">
+    <div style="background: var(--mochaMantle); border: 2px solid var(--mochaMauve); border-radius: var(--radiusCard); padding: 3rem 2rem; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+      <h2 style="font-family: var(--font-mono); font-size: 2.2rem; color: var(--mochaMauve); margin-bottom: 0.8rem;">Jorge Esteban Medrano Chacolla</h2>
+      <p style="color: var(--mochaSubtext1); font-size: 1.15rem; margin-bottom: 2.2rem;">Game Developer &amp; Systems Architect — Disponible para evaluación técnica y proyectos.</p>
       
       <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
         <a href="mailto:jesteban.medrano@gmail.com" class="btn" style="flex: initial; background: #cba6f7; color: #11111b; font-weight: 800; font-size: 1.1rem; padding: 0.9rem 1.8rem; border-radius: 10px; box-shadow: 0 0 20px rgba(203, 166, 247, 0.4); text-decoration: none;">
@@ -285,73 +269,71 @@
     </div>
   </section>
 
-  <!-- NO FOOTER HERE -->
-
-  <!-- Modals -->
+  <!-- * * * MODALS * * * -->
   <div id="modal-void" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('modal-void')">&times;</button>
+    <div class="modalBox">
+      <button class="modalClose" onclick="closeModal('modal-void')">&times;</button>
       <h3>The Void Finals</h3>
-      <p style="color: var(--mocha-subtext0); margin-bottom: 1rem;">Official Trailer &amp; Ficha Técnica</p>
+      <p style="color: var(--mochaSubtext0); margin-bottom: 1rem;">Official Trailer &amp; Ficha Técnica</p>
       
-      <video src="the_void_trailer.mp4" controls loop style="width: 100%; border-radius: 10px; margin-bottom: 0.8rem; border: 1px solid var(--mocha-surface0);"></video>
+      <video src="the_void_trailer.mp4" controls loop style="width: 100%; border-radius: 10px; margin-bottom: 0.8rem; border: 1px solid var(--mochaSurface0);"></video>
 
-      <p style="font-size: 0.75rem; color: var(--mocha-subtext0); margin-bottom: 1.2rem; background: var(--mocha-crust); padding: 6px 10px; border-radius: 6px; font-family: var(--font-mono);">
+      <p style="font-size: 0.75rem; color: var(--mochaSubtext0); margin-bottom: 1.2rem; background: var(--mochaCrust); padding: 6px 10px; border-radius: 6px; font-family: var(--fontMono);">
         🎵 Music: <strong>NCS Dream by Di Young</strong> (Creative Commons Attribution) • Promoted by Audio Library
       </p>
 
-      <ul style="padding-left: 20px; color: var(--mocha-subtext1); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      <ul style="padding-left: 20px; color: var(--mochaSubtext1); font-size: 0.95rem; margin-bottom: 1.5rem;">
         <li>• <strong>Redes:</strong> Photon PUN 2 (Lobbies, salas y reconciliación).</li>
         <li>• <strong>Controles:</strong> WASD (Movimiento), Shift (Sprint), Espacio (Mantener para Volar).</li>
         <li>• <strong>Arte:</strong> Estilo Voxel 3D en tercera persona.</li>
       </ul>
-      <a href="https://jorgemedrano.itch.io/the-void" target="_blank" class="btn btn-itch" style="width: 100%;"><i class="fa-solid fa-download"></i> Probar en Itch.io</a>
+      <a href="https://jorgemedrano.itch.io/the-void" target="_blank" class="btn btnItch" style="width: 100%;"><i class="fa-solid fa-download"></i> Probar en Itch.io</a>
     </div>
   </div>
 
   <div id="modal-navmesh" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('modal-navmesh')">&times;</button>
+    <div class="modalBox">
+      <button class="modalClose" onclick="closeModal('modal-navmesh')">&times;</button>
       <h3>Dungeon Escape</h3>
-      <p style="color: var(--mocha-subtext0); margin-bottom: 1rem;">Trailer &amp; Ficha Técnica (NavMesh AI)</p>
+      <p style="color: var(--mochaSubtext0); margin-bottom: 1rem;">Trailer &amp; Ficha Técnica (NavMesh AI)</p>
       
-      <video src="dungeon_escape_trailer.mp4" controls loop style="width: 100%; border-radius: 10px; margin-bottom: 0.8rem; border: 1px solid var(--mocha-surface0);"></video>
+      <video src="dungeon_escape_trailer.mp4" controls loop style="width: 100%; border-radius: 10px; margin-bottom: 0.8rem; border: 1px solid var(--mochaSurface0);"></video>
 
-      <p style="font-size: 0.75rem; color: var(--mocha-subtext0); margin-bottom: 1.2rem; background: var(--mocha-crust); padding: 6px 10px; border-radius: 6px; font-family: var(--font-mono);">
+      <p style="font-size: 0.75rem; color: var(--mochaSubtext0); margin-bottom: 1.2rem; background: var(--mochaCrust); padding: 6px 10px; border-radius: 6px; font-family: var(--fontMono);">
         🎵 Music: <strong>Dark Suspense Trailer by Nastelbom</strong> (Pixabay License • Royalty Free)
       </p>
 
-      <ul style="padding-left: 20px; color: var(--mocha-subtext1); font-size: 0.95rem; margin-bottom: 1.5rem;">
+      <ul style="padding-left: 20px; color: var(--mochaSubtext1); font-size: 0.95rem; margin-bottom: 1.5rem;">
         <li>• <strong>Pathfinding:</strong> Agentes IA con evitación dinámica de obstáculos y trampas en Unity.</li>
         <li>• <strong>Level Design:</strong> Escape de mazmorra de 3 niveles con recolección de calaveras y drones patrullando.</li>
         <li>• <strong>Rendimiento:</strong> Recalculado eficiente de rutas en C#.</li>
       </ul>
-      <a href="https://jorgemedrano.itch.io/dungeon-escape" target="_blank" class="btn btn-itch" style="width: 100%;"><i class="fa-solid fa-download"></i> Probar en Itch.io</a>
+      <a href="https://jorgemedrano.itch.io/dungeon-escape" target="_blank" class="btn btnItch" style="width: 100%;"><i class="fa-solid fa-download"></i> Probar en Itch.io</a>
     </div>
   </div>
 
   <div id="modal-undertale" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('modal-undertale')">&times;</button>
+    <div class="modalBox">
+      <button class="modalClose" onclick="closeModal('modal-undertale')">&times;</button>
       <h3>Undertale Funni Ops: Reborn</h3>
-      <p style="color: var(--mocha-subtext0); margin-bottom: 1rem;">Trailer &amp; Enlaces</p>
+      <p style="color: var(--mochaSubtext0); margin-bottom: 1rem;">Trailer &amp; Enlaces</p>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
         <iframe src="https://www.youtube.com/embed/ClBTfkdMeUo?si=OlWw0DEh_pqCJDZw" title="Undertale Funni Ops Trailer" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
       </div>
-      <a href="https://youtu.be/ClBTfkdMeUo" target="_blank" class="btn btn-flat" style="margin-bottom: 0.8rem;"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Abrir en YouTube</a>
-      <a href="https://www.roblox.com/share?code=8b7131f2567878499497ae7222eb3128&type=ExperienceDetails&stamp=1785548542517" target="_blank" class="btn btn-roblox"><i class="fa-solid fa-play"></i> Jugar en Roblox</a>
+      <a href="https://youtu.be/ClBTfkdMeUo" target="_blank" class="btn btnFlat" style="margin-bottom: 0.8rem;"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Abrir en YouTube</a>
+      <a href="https://www.roblox.com/share?code=8b7131f2567878499497ae7222eb3128&type=ExperienceDetails&stamp=1785548542517" target="_blank" class="btn btnRoblox"><i class="fa-solid fa-play"></i> Jugar en Roblox</a>
     </div>
   </div>
 
   <div id="modal-bonkland" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('modal-bonkland')">&times;</button>
+    <div class="modalBox">
+      <button class="modalClose" onclick="closeModal('modal-bonkland')">&times;</button>
       <h3>Bonkland</h3>
-      <p style="color: var(--mocha-subtext0); margin-bottom: 1rem;">Trailer &amp; Enlaces</p>
+      <p style="color: var(--mochaSubtext0); margin-bottom: 1rem;">Trailer &amp; Enlaces</p>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
         <iframe src="https://drive.google.com/file/d/1od3Xlx1dhqTeGrVepPWaFnF9V-93nopc/preview" title="Bonkland Trailer" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
       </div>
-      <a href="https://www.roblox.com/share?code=65f89f6293180b4a94c83a6145e5df06&type=ExperienceDetails&stamp=1785548566007" target="_blank" class="btn btn-roblox"><i class="fa-solid fa-play"></i> Jugar en Roblox</a>
+      <a href="https://www.roblox.com/share?code=65f89f6293180b4a94c83a6145e5df06&type=ExperienceDetails&stamp=1785548566007" target="_blank" class="btn btnRoblox"><i class="fa-solid fa-play"></i> Jugar en Roblox</a>
     </div>
   </div>
 

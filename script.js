@@ -1,7 +1,4 @@
-// ==========================================================================
-// GAME DEV PORTFOLIO - JORGE ESTEBAN MEDRANO CHACOLLA (v5)
-// Features: Modal Audio Auto-Stop, Flying Ships Canvas, Mouse Follower
-// ==========================================================================
+// * * * PORTFOLIO INTERACTIVITY & CANVAS * * *
 
 document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
@@ -10,16 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initSpaceshipsCanvas();
   initSmoothScroll();
 
-  // Ensure all videos start paused with zero audio on page load
   document.querySelectorAll('video').forEach(video => {
     video.pause();
     video.currentTime = 0;
   });
 });
 
-/**
- * Flying Spaceships background canvas animation
- */
+// * * * FLYING SPACESHIPS CANVAS * * *
 function initSpaceshipsCanvas() {
   const canvas = document.getElementById('shipsCanvas');
   if (!canvas) return;
@@ -107,9 +101,7 @@ function initSpaceshipsCanvas() {
   loop();
 }
 
-/**
- * Interactive Mouse Follower Effect
- */
+// * * * MOUSE FOLLOWER EFFECT * * *
 function initMouseFollower() {
   const follower = document.getElementById('mouseFollower');
   const dot = document.getElementById('mouseDot');
@@ -138,11 +130,9 @@ function initMouseFollower() {
   animateFollower();
 }
 
-/**
- * Filter projects by category
- */
+// * * * CATEGORY FILTERS * * *
 function initProjectFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll('.filterBtn');
   const projectCards = document.querySelectorAll('.card');
 
   filterBtns.forEach(btn => {
@@ -173,11 +163,9 @@ function initProjectFilters() {
   });
 }
 
-/**
- * VS Code Tab Navigation Highlight
- */
+// * * * TAB NAVIGATION * * *
 function initTabNavigation() {
-  const tabs = document.querySelectorAll('.vscode-tabs .tab');
+  const tabs = document.querySelectorAll('.vscodeTabs .tab');
   
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -187,16 +175,13 @@ function initTabNavigation() {
   });
 }
 
-/**
- * Modal Handling (Stops audio/video when closing)
- */
+// * * * MODAL AUTO-STOP & AUDIO * * *
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Play video automatically on open
     const video = modal.querySelector('video');
     if (video) {
       video.currentTime = 0;
@@ -211,13 +196,11 @@ function closeModal(modalId) {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
 
-    // STOP AUDIO / VIDEO IMMEDIATELY ON CLOSE
     modal.querySelectorAll('video').forEach(video => {
       video.pause();
       video.currentTime = 0;
     });
 
-    // Reset iframe embeds to stop YouTube/Drive playback
     modal.querySelectorAll('iframe').forEach(iframe => {
       const src = iframe.src;
       iframe.src = '';
@@ -240,9 +223,7 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-/**
- * Smooth Navigation Scroll
- */
+// * * * SMOOTH NAVIGATION SCROLL * * *
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
