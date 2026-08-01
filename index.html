@@ -190,9 +190,9 @@
         </article>
 
         <article class="card" data-category="roblox">
-          <div class="cardMedia">
+          <div class="cardMedia" id="media-bonkland">
             <span class="cardBadge badgeRoblox">Roblox • Tech Showcase</span>
-            <iframe src="https://drive.google.com/file/d/1od3Xlx1dhqTeGrVepPWaFnF9V-93nopc/preview" title="Bonkland Trailer" frameborder="0" allow="autoplay" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+            <img src="bonkland_preview.gif" alt="Bonkland Gameplay Preview" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="cardBody">
             <div class="cardTags">
@@ -326,11 +326,16 @@
     <div class="modalBox">
       <button class="modalClose" onclick="closeModal('modal-bonkland')">&times;</button>
       <h3>Bonkland</h3>
-      <p style="color: var(--mochaSubtext0); margin-bottom: 1rem;">Trailer &amp; Enlaces</p>
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
-        <iframe src="https://drive.google.com/file/d/1od3Xlx1dhqTeGrVepPWaFnF9V-93nopc/preview" title="Bonkland Trailer" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-      </div>
-      <a href="https://www.roblox.com/share?code=65f89f6293180b4a94c83a6145e5df06&type=ExperienceDetails&stamp=1785548566007" target="_blank" class="btn btnRoblox"><i class="fa-solid fa-play"></i> Jugar en Roblox</a>
+      <p style="color: var(--mochaSubtext0); margin-bottom: 1rem;">Official Trailer &amp; Ficha Técnica</p>
+
+      <video src="bonkland_trailer.mp4" controls loop style="width: 100%; border-radius: 10px; margin-bottom: 1.2rem; border: 1px solid var(--mochaSurface0);"></video>
+
+      <ul style="padding-left: 20px; color: var(--mochaSubtext1); font-size: 0.95rem; margin-bottom: 1.5rem;">
+        <li>• <strong>Motor:</strong> Roblox Studio (Luau).</li>
+        <li>• <strong>Físicas:</strong> Sistema de mecánicas e impulsos de personaje personalizados.</li>
+        <li>• <strong>Arquitectura:</strong> Código modular desacoplado mediante ModuleScripts.</li>
+      </ul>
+      <a href="https://www.roblox.com/share?code=65f89f6293180b4a94c83a6145e5df06&type=ExperienceDetails&stamp=1785548566007" target="_blank" class="btn btnRoblox" style="width: 100%;"><i class="fa-solid fa-play"></i> Jugar en Roblox</a>
     </div>
   </div>
 
