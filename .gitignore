@@ -1,0 +1,8 @@
+# Temporary build clips & raw audio
+clip_*.mp4
+vclip_*.mp4
+dclip_*.mp4
+void_clip_*.mp4
+*concat*.mp4
+*.txt
+*.wav
