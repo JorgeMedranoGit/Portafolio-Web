@@ -6,3 +6,9 @@ void_clip_*.mp4
 *concat*.mp4
 *.txt
 *.wav
+
+# CV files
+CV_*
+cv_*.html
+*.pdf
+
