@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initMouseFollower();
   initSpaceshipsCanvas();
   initSmoothScroll();
+
+  // Ensure all videos start paused with zero audio on page load
+  document.querySelectorAll('video').forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+  });
 });
 
 /**
