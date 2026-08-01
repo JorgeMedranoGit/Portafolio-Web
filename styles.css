@@ -39,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -49,6 +50,7 @@ body {
   overflow-x: hidden;
   position: relative;
   font-size: 1.05rem;
+  width: 100%;
 }
 
 /* * * * CANVAS BACKGROUND ANIMATION * * * */
@@ -208,6 +210,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 8.5rem 1.5rem 3rem;
+  width: 100%;
 }
 
 .heroCard {
@@ -219,6 +222,7 @@ body {
   overflow: hidden;
   backdrop-filter: blur(16px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 35px rgba(203, 166, 247, 0.1);
+  width: 100%;
 }
 
 .heroRoleTag {
@@ -239,10 +243,11 @@ body {
 .heroName {
   font-size: 3.5rem;
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 1.2rem;
-  letter-spacing: -0.03em;
-  word-break: break-word;
+  letter-spacing: -0.02em;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .gradientText {
@@ -278,7 +283,6 @@ body {
   gap: 0.5rem;
   transition: var(--transition);
   max-width: 100%;
-  word-break: break-all;
 }
 
 .heroChip:hover {
@@ -323,6 +327,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1.5rem 6rem;
+  width: 100%;
 }
 
 .projectsWindow {
@@ -332,6 +337,7 @@ body {
   overflow: hidden;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(14px);
+  width: 100%;
 }
 
 .windowBar {
@@ -400,6 +406,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: var(--transition);
+  width: 100%;
 }
 
 .card:hover {
@@ -417,6 +424,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .cardMedia img, .cardMedia video, .cardMedia iframe {
@@ -438,6 +446,10 @@ body {
   z-index: 2;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .badgeUnity { background: rgba(137, 180, 250, 0.2); color: var(--mochaBlue); border: 1px solid var(--mochaBlue); }
@@ -575,6 +587,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1.5rem 5rem;
+  width: 100%;
 }
 
 .skillsGrid {
@@ -657,70 +670,92 @@ body {
 
 .modalClose:hover { color: var(--mochaText); }
 
-/* * * * COMPREHENSIVE MOBILE RESPONSIVE QUERIES * * * */
+/* * * * PERFECT MOBILE RESPONSIVE DESIGN (EVERY SCREEN SIZE) * * * */
 
 @media (max-width: 768px) {
   body {
-    font-size: 1rem;
-  }
-
-  .vscodeHeader {
-    position: sticky;
+    font-size: 0.98rem;
   }
 
   .vscodeTitlebar {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
   }
 
   .hero {
-    padding: 2.5rem 1rem 2rem;
+    padding: 5.5rem 0.8rem 1.8rem;
   }
 
   .heroCard {
-    padding: 2rem 1.4rem;
+    padding: 1.6rem 1rem;
+    border-radius: 12px;
   }
 
   .heroName {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   .heroSub {
-    font-size: 1rem;
+    font-size: 0.98rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .heroTagsRow {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .heroChip {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.8rem !important;
+    padding: 0.5rem 0.6rem !important;
+    word-break: break-all;
   }
 
   .heroStatsRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-    margin: 1.8rem 0;
-    padding-top: 1.4rem;
+    gap: 1rem 0.5rem;
+    margin: 1.4rem 0;
+    padding-top: 1.2rem;
+    text-align: center;
   }
 
   .statVal {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .statLbl {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   .heroActions {
     flex-direction: column;
     width: 100%;
+    gap: 0.6rem;
   }
 
   .heroActions .btn {
     width: 100%;
+    padding: 0.75rem 0.8rem;
+    font-size: 0.9rem;
   }
 
   .projectsSection {
-    padding: 1rem 1rem 4rem;
+    padding: 1rem 0.6rem 3rem;
   }
 
   .windowBar {
     flex-direction: column;
-    align-items: stretch;
-    padding: 1rem;
+    align-items: flex-start;
+    padding: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .windowTitle {
+    font-size: 1.05rem;
   }
 
   .filterGroup {
@@ -731,13 +766,13 @@ body {
   .filterBtn {
     flex: 1;
     text-align: center;
-    padding: 0.4rem 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.35rem 0.4rem;
+    font-size: 0.78rem;
   }
 
   .projectsGrid {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 0.8rem;
     gap: 1.4rem;
   }
 
@@ -745,12 +780,23 @@ body {
     height: 190px;
   }
 
+  .cardBadge {
+    font-size: 0.68rem;
+    padding: 3px 6px;
+    max-width: 85%;
+  }
+
   .cardBody {
-    padding: 1.2rem;
+    padding: 1.1rem;
+  }
+
+  .cardBody h3 {
+    font-size: 1.25rem;
   }
 
   .cardActions {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
   .cardActions .btn {
@@ -758,30 +804,26 @@ body {
   }
 
   .skillsSection {
-    padding: 1.5rem 1rem 4rem;
+    padding: 1.2rem 0.6rem 3rem;
   }
 
   .modalBox {
-    padding: 1.3rem;
+    padding: 1.2rem 0.9rem;
     max-height: 88vh;
   }
 }
 
 @media (max-width: 480px) {
   .heroName {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .heroRoleTag {
-    font-size: 0.82rem;
-  }
-
-  .heroChip {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     padding: 0.35rem 0.8rem;
   }
 
   .statVal {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
